@@ -41,29 +41,6 @@
                         ]
                     },
                     {
-                        "description": "fn+h to backwards delete",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "h",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "fn"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "delete_or_backspace",
-                                        "modifiers": [
-                                            "fn"
-                                        ]
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    }, {
                         "description": "contrl+w to delete word vim",
                         "manipulators": [
                             {
@@ -87,7 +64,7 @@
                             }
                         ]
                     },
-                    {
+                       {
                         "description": "contrl+e to delete word not in vim",
                         "manipulators": [
                             {
@@ -111,6 +88,7 @@
                             }
                         ]
                     },
+
                     {
                         "description": "cmd+e to delete word",
                         "manipulators": [
