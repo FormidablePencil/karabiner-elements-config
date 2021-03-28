@@ -35,28 +35,6 @@
               }
             ]
           },
-          {
-            "description": "fn+h to backwards delete",
-            "manipulators": [
-              {
-                "from": {
-                  "key_code": "h",
-                  "modifiers": {
-                    "mandatory": ["fn"]
-                  }
-                },
-                "to": [
-                  {
-                    "key_code": "delete_or_backspace",
-                    "modifiers": ["fn"]
-                  }
-                ],
-                "type": "basic"
-              }
-            ]
-          },
-
-
 
           {
             "description": "shift to right_command",
@@ -74,35 +52,6 @@
               }
             ]
           },
-
-
-          {
-            "description": "left_cmd+e to delete word vim",
-            "manipulators": [
-              {
-                "conditions": [
-                  {
-                    "bundle_identifiers": ["net.kovidgoyal.kitty"],
-                    "type": "frontmost_application_if"
-                  }
-                ],
-                "from": {
-                  "key_code": "e",
-                  "modifiers": {
-                    "mandatory": ["left_command"]
-                  }
-                },
-                "to": [
-                  {
-                    "key_code": "w",
-                    "modifiers": ["left_control"]
-                  }
-                ],
-                "type": "basic"
-              }
-            ]
-          },
-          
 
           {
             "description": "left_cmd+e to delete word other than in vim",
@@ -123,14 +72,33 @@
                 "to": [
                   {
                     "key_code": "delete_or_backspace",
-                    "modifiers": ["left_control"]
+                    "modifiers": ["left_option"]
                   }
                 ],
                 "type": "basic"
               }
             ]
           },
-
+          {
+            "description": "control+l === left_command+l",
+            "manipulators": [
+              {
+                "from": {
+                  "key_code": "l",
+                  "modifiers": {
+                    "mandatory": ["left_control"]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "l",
+                    "modifiers": ["left_command"]
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
           {
             "description": "cmd+e to delete word",
             "manipulators": [
@@ -147,37 +115,19 @@
             ]
           },
           {
-            "description": "cmd+h to backspace",
+            "description": "fn+j to backwards backspace",
             "manipulators": [
               {
                 "from": {
-                  "key_code": "h",
+                  "key_code": "j",
                   "modifiers": {
-                    "mandatory": ["left_command"]
+                    "mandatory": ["fn"]
                   }
                 },
                 "to": [
                   {
-                    "key_code": "delete_or_backspace"
-                  }
-                ],
-                "type": "basic"
-              }
-            ]
-          },
-          {
-            "description": "control+h to backspace",
-            "manipulators": [
-              {
-                "from": {
-                  "key_code": "h",
-                  "modifiers": {
-                    "mandatory": ["left_control"]
-                  }
-                },
-                "to": [
-                  {
-                    "key_code": "delete_or_backspace"
+                    "key_code": "delete_or_backspace",
+                    "modifiers": ["fn"]
                   }
                 ],
                 "type": "basic"
@@ -399,4 +349,3 @@
     }
   ]
 }
-
