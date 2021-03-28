@@ -56,6 +56,26 @@
             ]
           },
 
+
+
+          {
+            "description": "shift to right_command",
+            "manipulators": [
+              {
+                "from": {
+                  "key_code": "right_command"
+                },
+                "to": [
+                  {
+                    "key_code": "right_shift"
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+
+
           {
             "description": "left_cmd+e to delete word vim",
             "manipulators": [
@@ -82,32 +102,7 @@
               }
             ]
           },
-          {
-            "description": "right_cmd+e to delete word vim",
-            "manipulators": [
-              {
-                "conditions": [
-                  {
-                    "bundle_identifiers": ["net.kovidgoyal.kitty"],
-                    "type": "frontmost_application_if"
-                  }
-                ],
-                "from": {
-                  "key_code": "e",
-                  "modifiers": {
-                    "mandatory": ["right_command"]
-                  }
-                },
-                "to": [
-                  {
-                    "key_code": "w",
-                    "modifiers": ["left_control"]
-                  }
-                ],
-                "type": "basic"
-              }
-            ]
-          },
+          
 
           {
             "description": "left_cmd+e to delete word other than in vim",
@@ -123,32 +118,6 @@
                   "key_code": "e",
                   "modifiers": {
                     "mandatory": ["left_command"]
-                  }
-                },
-                "to": [
-                  {
-                    "key_code": "delete_or_backspace",
-                    "modifiers": ["left_control"]
-                  }
-                ],
-                "type": "basic"
-              }
-            ]
-          },
-          {
-            "description": "right_cmd+e to delete word other than in vim",
-            "manipulators": [
-              {
-                "conditions": [
-                  {
-                    "bundle_identifiers": ["net.kovidgoyal.kitty"],
-                    "type": "frontmost_application_unless"
-                  }
-                ],
-                "from": {
-                  "key_code": "e",
-                  "modifiers": {
-                    "mandatory": ["right_command"]
                   }
                 },
                 "to": [
@@ -216,13 +185,13 @@
             ]
           },
           {
-            "description": "Change right_command+hjkl to arrow keys",
+            "description": "Change left_command+hjkl to arrow keys",
             "manipulators": [
               {
                 "from": {
                   "key_code": "h",
                   "modifiers": {
-                    "mandatory": ["right_command"],
+                    "mandatory": ["left_command"],
                     "optional": ["any"]
                   }
                 },
@@ -237,7 +206,7 @@
                 "from": {
                   "key_code": "j",
                   "modifiers": {
-                    "mandatory": ["right_command"],
+                    "mandatory": ["left_command"],
                     "optional": ["any"]
                   }
                 },
@@ -252,7 +221,7 @@
                 "from": {
                   "key_code": "k",
                   "modifiers": {
-                    "mandatory": ["right_command"],
+                    "mandatory": ["left_command"],
                     "optional": ["any"]
                   }
                 },
@@ -267,7 +236,7 @@
                 "from": {
                   "key_code": "l",
                   "modifiers": {
-                    "mandatory": ["right_command"],
+                    "mandatory": ["left_command"],
                     "optional": ["any"]
                   }
                 },
