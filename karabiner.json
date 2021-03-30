@@ -103,7 +103,7 @@
                 "from": {
                   "key_code": "k",
                   "modifiers": {
-                    "mandatory": ["left_shift"]
+                    "mandatory": ["right_shift"]
                   }
                 },
                 "to": [
