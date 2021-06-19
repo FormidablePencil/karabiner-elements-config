@@ -16,86 +16,18 @@
         },
         "rules": [
           {
-            "description": "shift => z",
+            "description": "shift delete => delete word",
             "manipulators": [
               {
                 "from": {
-                  "key_code": "left_shift"
-                },
-                "to": [
-                  {
-                    "key_code": "z"
-                  }
-                ],
-                "type": "basic"
-              }
-            ]
-          },
-
-          {
-            "description": "z => shift",
-            "manipulators": [
-              {
-                "from": {
-                  "key_code": "z"
-                },
-                "to": [
-                  {
-                    "key_code": "left_shift"
-                  }
-                ],
-                "type": "basic"
-              }
-            ]
-          },
-
-          {
-            "description": "cmd+shiift+p => [",
-            "manipulators": [
-              {
-                "from": {
-                  "key_code": "p",
                   "modifiers": {
-                    "mandatory": ["left_command", "left_shift"]
-                  }
+                    "mandatory": ["left_shift"]
+                  },
+                  "key_code": "delete_or_backspace"
                 },
                 "to": [
                   {
-                    "key_code": "open_bracket"
-                  }
-                ],
-                "type": "basic"
-              }
-            ]
-          },
-
-          {
-            "description": "[ => word delete",
-            "manipulators": [
-              {
-                "from": {
-                  "key_code": "open_bracket"
-                },
-                "to": [
-                  {
-                    "key_code": "delete_or_backspace",
-                    "modifiers": ["left_option"]
-                  }
-                ],
-                "type": "basic"
-              }
-            ]
-          },
-
-          {
-            "description": "quote => delete",
-            "manipulators": [
-              {
-                "from": {
-                  "key_code": "quote"
-                },
-                "to": [
-                  {
+                    "modifiers": ["left_option"],
                     "key_code": "delete_or_backspace"
                   }
                 ],
@@ -105,7 +37,27 @@
           },
 
           {
-            "description": "cmd+shift+o => quote",
+            "description": "cmd+shift+i => semicolon",
+            "manipulators": [
+              {
+                "from": {
+                  "key_code": "i",
+                  "modifiers": {
+                    "mandatory": ["left_command", "left_shift"]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "semicolon"
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+
+          {
+            "description": "cmd+shift+o => semicolon",
             "manipulators": [
               {
                 "from": {
@@ -116,7 +68,8 @@
                 },
                 "to": [
                   {
-                    "key_code": "quote"
+                    "modifiers": ["shift"],
+                    "key_code": "semicolon"
                   }
                 ],
                 "type": "basic"
@@ -931,12 +884,23 @@
           ]
         }
       ],
+
       "name": "Main",
       "parameters": {
         "delay_milliseconds_before_open_device": 1000
       },
       "selected": true,
       "simple_modifications": [
+        {
+          "from": {
+            "key_code": "semicolon"
+          },
+          "to": [
+            {
+              "key_code": "delete_or_backspace"
+            }
+          ]
+        },
         {
           "from": {
             "key_code": "caps_lock"
@@ -954,6 +918,48 @@
           "to": [
             {
               "key_code": "caps_lock"
+            }
+          ]
+        },
+
+        {
+          "from": {
+            "key_code": "z"
+          },
+          "to": [
+            {
+              "key_code": "left_shift"
+            }
+          ]
+        },
+        {
+          "from": {
+            "key_code": "left_shift"
+          },
+          "to": [
+            {
+              "key_code": "z"
+            }
+          ]
+        },
+
+        {
+          "from": {
+            "key_code": "period"
+          },
+          "to": [
+            {
+              "key_code": "right_shift"
+            }
+          ]
+        },
+        {
+          "from": {
+            "key_code": "right_shift"
+          },
+          "to": [
+            {
+              "key_code": "period"
             }
           ]
         }
